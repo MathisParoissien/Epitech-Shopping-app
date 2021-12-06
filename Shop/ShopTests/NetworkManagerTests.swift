@@ -21,8 +21,12 @@ class NetworkManagerTests: XCTestCase {
         }
 
         networkManager.data(from: resource, type: Shop.self) { result in
-            // Check documentation: https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
-            // TODO: Assert
+            switch result {
+            case .success(let shop):
+                XCTAssertNotNil(shop, "success")
+            case .failure(let error):
+                XCTFail("error fetching data -> \(error.localizedDescription)")
+            }
             expectation.fulfill()
         }
 
@@ -41,6 +45,12 @@ class NetworkManagerTests: XCTestCase {
 
         networkManager.data(from: resource, type: Shop.self) { result in
             // TODO: Assert
+            switch result {
+            case .success(_):
+                XCTFail("data call should not return success")
+            case .failure(let error):
+                XCTAssert(error == NetworkError.malformedData, "data should return a malFormedData")
+            }
             expectation.fulfill()
         }
 

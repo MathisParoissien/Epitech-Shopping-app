@@ -46,19 +46,14 @@ public class NetworkManager: NetworkManaging {
     }
     
     func data<T: Decodable>(from url: URL, type: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            if let error = error {
-                completion(Result<T, NetworkError>.failure(error as! NetworkError))
-            }
+        do {
+            let data = try Data(contentsOf: url)
+            let jsonDecoder = JSONDecoder()
             
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                      completion(Result<T, NetworkError>.failure(NetworkError.noData))
-                      return
-                  }
-            if let data = data, let fileSummary = try? JSONDecoder().decode(Shop.self, from: data) {
-                completion(Result<T, NetworkError>.success(fileSummary as! T))
-            }
-        })
-        task.resume()
+            let dataFromJson = try jsonDecoder.decode(Shop.self, from: data)
+            completion(Result<T, NetworkError>.success(dataFromJson as! T))
+        } catch {
+            completion(Result<T, NetworkError>.failure(NetworkError.malformedData))
+        }
     }
 }
