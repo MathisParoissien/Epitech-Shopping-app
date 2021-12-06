@@ -1,38 +1,34 @@
 # Project Soap Shop
 
-The goal of this project is to make you learn about iOS development and the tools you need to start making an app on your own.
-The project is already created, you just have to modify this project and resolve the excercise within it.
-Those exercises will make you learn how to fetch data from a server, how to cache data, how to modify UI, how to parse data from server.
-
-
 The API for this project is located at: https://api.npoint.io/c905fd4932fa5fd53b0e
 
 Exercises:
-- Create Data models:
-    - Use Codable for your data model (ShopModel.swift)
-    - Create Unit Tests to test your implementation (ShopModelTests.swift)
-- Create the Networking layer:
-    - Use URLSession for your networking layer (NetworkManager.swift)
-    - Create Unit Tests to test your networking implementation
-- Create the API handler layer:
-    - Use the created networking layer to fetch data (APIHandler.swift)
-    - Create Unit Tests to test your networking implementation
-- Update the views to reflect receiving data
-    - Update HomeViewController and replace the TODOs
-    - Update ProductTableViewCell apply method.
-    - Update DetailViewController apply method
-- Modify the UI implementation:
-    - Make UI updates on the table view cell (No tests associated)
-    - Check out the folder ./Expectation/
-- Add navigation to detail view when a cell in tapped on
-    - Check HomeViewController and UITableViewDelegate
-    - You can either presenter or push a view
-- Create caching layer:
-    - Save the selected quantity when the user tap the [-] or [+] button on the product detail page.
-    - Update DetailPresenter
-    - Create Unit Tests to validate the caching
-- Add Tests for HomePresenter and DetailPresenter
-    - Located in HomePresenterTests.swift and DetailPresenterTests.swift
+- 1 Create Data models:
+    - 1 Use Codable for your data model (ShopModel.swift) ✅
+    - 2 Create Unit Tests to test your implementation (ShopModelTests.swift) ✅
+- 2 Create the Networking layer:
+    - 1 Use URLSession for your networking layer (NetworkManager.swift) ✅
+    - 2 Create Unit Tests to test your networking implementation ✅
+- 3 Create the API handler layer:
+    - 1 Use the created networking layer to fetch data (APIHandler.swift)
+    - 2 Create Unit Tests to test your networking implementation
+- 4 Update the views to reflect receiving data
+    - 1 Update HomeViewController and replace the TODOs
+    - 2 Update ProductTableViewCell apply method.
+    - 3 Update DetailViewController apply method
+- 5 Modify the UI implementation:
+    - 1 Make UI updates on the table view cell (No tests associated)
+    - 2 Check out the folder ./Expectation/
+- 6 Add navigation to detail view when a cell in tapped on
+    - 1 Check HomeViewController and UITableViewDelegate
+    - 2 You can either presenter or push a view
+- 7 Create caching layer:
+    - 1 Save the selected quantity when the user tap the [-] or [+] button on the product detail page.
+    - 2 Update DetailPresenter
+    - 3 Create Unit Tests to validate the caching
+
+- 8 Add Tests for HomePresenter and DetailPresenter
+    - 1 Located in HomePresenterTests.swift and DetailPresenterTests.swift
 
 ## UI
 
@@ -42,18 +38,6 @@ Now | After
 -- | -- 
 <img src="https://github.com/Xodia/ios-101-epitech-2021/blob/main/Shop/Shop/Expectation/Before.png" width="300" /> | <img src="https://github.com/Xodia/ios-101-epitech-2021/blob/main/Shop/Shop/Expectation/After.png" width="300" />
 
-
-## Project Delivery
-
-### Create a Github repository 
-
-Create a github repository for your group (2 person per group)
-
-### Invite contributor to your new repository
-
-Invite "Xodia" as contributor, this will allow me to review your project.
-
-### Fill up the group project form
 
 Form is located at this [link](https://docs.google.com/forms/d/1Qn3CR5MWs6z8qiXyBBqNv58V-ScXbLTD8kDOyE797Y4/prefill)
 
