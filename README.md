@@ -10,8 +10,8 @@ Exercises:
     - 1 Use URLSession for your networking layer (NetworkManager.swift) ✅
     - 2 Create Unit Tests to test your networking implementation ✅
 - 3 Create the API handler layer:
-    - 1 Use the created networking layer to fetch data (APIHandler.swift)
-    - 2 Create Unit Tests to test your networking implementation
+    - 1 Use the created networking layer to fetch data (APIHandler.swift) ✅
+    - 2 Create Unit Tests to test your networking implementation ✅
 - 4 Update the views to reflect receiving data
     - 1 Update HomeViewController and replace the TODOs
     - 2 Update ProductTableViewCell apply method.
