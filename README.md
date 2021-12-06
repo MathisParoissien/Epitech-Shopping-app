@@ -1,10 +1,5 @@
 # Project Soap Shop
 
-The goal of this project is to make you learn about iOS development and the tools you need to start making an app on your own.
-The project is already created, you just have to modify this project and resolve the excercise within it.
-Those exercises will make you learn how to fetch data from a server, how to cache data, how to modify UI, how to parse data from server.
-
-
 The API for this project is located at: https://api.npoint.io/c905fd4932fa5fd53b0e
 
 Exercises:
@@ -42,18 +37,6 @@ Now | After
 -- | -- 
 <img src="https://github.com/Xodia/ios-101-epitech-2021/blob/main/Shop/Shop/Expectation/Before.png" width="300" /> | <img src="https://github.com/Xodia/ios-101-epitech-2021/blob/main/Shop/Shop/Expectation/After.png" width="300" />
 
-
-## Project Delivery
-
-### Create a Github repository 
-
-Create a github repository for your group (2 person per group)
-
-### Invite contributor to your new repository
-
-Invite "Xodia" as contributor, this will allow me to review your project.
-
-### Fill up the group project form
 
 Form is located at this [link](https://docs.google.com/forms/d/1Qn3CR5MWs6z8qiXyBBqNv58V-ScXbLTD8kDOyE797Y4/prefill)
 
