@@ -4,10 +4,10 @@ The API for this project is located at: https://api.npoint.io/c905fd4932fa5fd53b
 
 Exercises:
 - Create Data models:
-    - Use Codable for your data model (ShopModel.swift)
-    - Create Unit Tests to test your implementation (ShopModelTests.swift)
+    - Use Codable for your data model (ShopModel.swift) ✅
+    - Create Unit Tests to test your implementation (ShopModelTests.swift) ✅
 - Create the Networking layer:
-    - Use URLSession for your networking layer (NetworkManager.swift)
+    - Use URLSession for your networking layer (NetworkManager.swift) ✅
     - Create Unit Tests to test your networking implementation
 - Create the API handler layer:
     - Use the created networking layer to fetch data (APIHandler.swift)
