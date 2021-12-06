@@ -8,7 +8,7 @@ Exercises:
     - 2 Create Unit Tests to test your implementation (ShopModelTests.swift) ✅
 - 2 Create the Networking layer:
     - 1 Use URLSession for your networking layer (NetworkManager.swift) ✅
-    - 2 Create Unit Tests to test your networking implementation
+    - 2 Create Unit Tests to test your networking implementation ✅
 - 3 Create the API handler layer:
     - 1 Use the created networking layer to fetch data (APIHandler.swift)
     - 2 Create Unit Tests to test your networking implementation
