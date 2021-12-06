@@ -16,5 +16,13 @@ class APIHandlingTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
         // TODO: Assert
+        apiHandler.fetchShop { res in
+            switch res {
+            case .success(let shop):
+                XCTAssertNotNil(shop, "testShouldCallNetworkingManagerWhenFetchShopCalled success")
+            case .failure(let error):
+                XCTFail("testShouldCallNetworkingManagerWhenFetchShopCalled failed error -> \(error.localizedDescription)")
+            }
+        }
     }
 }

@@ -32,17 +32,17 @@ protocol NetworkManaging {
 
 public class NetworkManager: NetworkManaging {
     
-    @Published var shop: Shop?
+//    @Published var shop: Shop?
 
     init() {
-        data(from: URL(string: "https://api.npoint.io/c905fd4932fa5fd53b0e")!, type: Shop.self) { result in
-            switch result {
-            case .success(let shop):
-                self.shop = shop
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+//        data(from: URL(string: "https://api.npoint.io/c905fd4932fa5fd53b0e")!, type: Shop.self) { result in
+//            switch result {
+//            case .success(let shop):
+//                self.shop = shop
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
     }
     
     func data<T: Decodable>(from url: URL, type: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void) {

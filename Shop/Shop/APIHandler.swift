@@ -20,6 +20,14 @@ class APIHandler: APIHandling {
     }
 
     func fetchShop(completion: ((Result<Shop, NetworkError>) -> Void)?) {
-
+        guard let url = URL(string: ShopURL.home) else { return }
+        networkManager.data(from: url, type: Shop.self) { res in
+            switch res {
+            case .success(let shop):
+                completion!(Result<Shop, NetworkError>.success(shop))
+            case .failure(let error):
+                completion!(Result<Shop, NetworkError>.failure(error))
+            }
+        }
     }
 }
