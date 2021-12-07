@@ -39,7 +39,7 @@ class ProductTableViewCell: UITableViewCell {
         super.layoutSubviews()
 
         productImageView.frame = CGRect(
-            x: bounds.width - Metrics.contentMargins.right - Metrics.imageSize.width,
+            x: Metrics.contentMargins.left,
             y: Metrics.contentMargins.top,
             width: Metrics.imageSize.width,
             height: Metrics.imageSize.height
@@ -47,7 +47,7 @@ class ProductTableViewCell: UITableViewCell {
         productImageView.backgroundColor = .darkGray
 
         nameLabel.frame = CGRect(
-            x: Metrics.contentMargins.left,
+            x: Metrics.contentMargins.left + Metrics.contentMargins.right + Metrics.imageSize.width,
             y: Metrics.contentMargins.top + Metrics.titleToSubtitleMargin,
             width: 0,
             height: 0
@@ -60,7 +60,7 @@ class ProductTableViewCell: UITableViewCell {
         )
 
         priceLabel.frame = CGRect(
-            x:  Metrics.contentMargins.left,
+            x: Metrics.contentMargins.left + Metrics.contentMargins.right + Metrics.imageSize.width,
             y: Metrics.titleToSubtitleMargin + nameLabel.frame.origin.y + nameLabel.frame.height,
             width: 0,
             height: 0
@@ -74,10 +74,10 @@ class ProductTableViewCell: UITableViewCell {
     }
 
     func apply(product: Product) {
-        nameLabel.text = "Update" // TODO: Update with product name
-        priceLabel.text = "Update" // TODO: Update with product price.currencyFormatted
+        nameLabel.text = product.name// TODO: Update with product name
+        priceLabel.text = product.price_cents.currencyFormatted // TODO: Update with product price.currencyFormatted
 
-        productImageView.image = .init() // TODO: Update with product image name
+        productImageView.image = UIImage(named: product.image) // TODO: Update with product image name
         setNeedsLayout()
     }
 
