@@ -7,16 +7,21 @@ import Foundation
 // between your caching strategy vs others.
 protocol CacheManaging {
     func save<T: Codable>(_ value: T?, forKey key: String)
-    func value<T: Codable>(forKey key: String, type: T.Type) -> T?
+//    func value<T: Codable>(forKey key: String, type: T.Type) -> T?
+    func integer(forKey key: String) -> Int?
 }
 
 class CacheManager: CacheManaging {
 
     func save<T: Codable>(_ value: T?, forKey key: String) {
-
+        UserDefaults.standard.setValue(value, forKey: key)
     }
 
-    func value<T: Codable>(forKey key: String, type: T.Type) -> T? {
-        return nil
+    func integer(forKey key: String) -> Int? {
+        return UserDefaults.standard.integer(forKey: key)
     }
+    
+//    func value<T: Codable>(forKey key: String, type: T.Type) -> T? {
+//        return UserDefaults.standard.string(forKey: key) as? T
+//    }
 }
