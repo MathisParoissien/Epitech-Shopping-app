@@ -13,18 +13,18 @@ Exercises:
     - 1 Use the created networking layer to fetch data (APIHandler.swift) ✅
     - 2 Create Unit Tests to test your networking implementation ✅
 - 4 Update the views to reflect receiving data
-    - 1 Update HomeViewController and replace the TODOs
-    - 2 Update ProductTableViewCell apply method.
-    - 3 Update DetailViewController apply method
+    - 1 Update HomeViewController and replace the TODOs ✅
+    - 2 Update ProductTableViewCell apply method. ✅
+    - 3 Update DetailViewController apply method ✅
 - 5 Modify the UI implementation:
-    - 1 Make UI updates on the table view cell (No tests associated)
-    - 2 Check out the folder ./Expectation/
+    - 1 Make UI updates on the table view cell (No tests associated) ✅
+    - 2 Check out the folder ./Expectation/ ✅
 - 6 Add navigation to detail view when a cell in tapped on
-    - 1 Check HomeViewController and UITableViewDelegate
-    - 2 You can either presenter or push a view
+    - 1 Check HomeViewController and UITableViewDelegate ✅
+    - 2 You can either presenter or push a view ✅
 - 7 Create caching layer:
-    - 1 Save the selected quantity when the user tap the [-] or [+] button on the product detail page.
-    - 2 Update DetailPresenter
+    - 1 Save the selected quantity when the user tap the [-] or [+] button on the product detail page. ✅
+    - 2 Update DetailPresenter ✅
     - 3 Create Unit Tests to validate the caching
 
 - 8 Add Tests for HomePresenter and DetailPresenter
