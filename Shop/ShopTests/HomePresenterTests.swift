@@ -24,6 +24,8 @@ class HomePresenterTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
         // TODO: Assert
+        
+//        XCTAssert(view.a)
     }
 
     func testViewDidLoadCallAPIHandler_withSuccessResult() throws {
@@ -32,15 +34,23 @@ class HomePresenterTests: XCTestCase {
         let queue = DispatchQueue.main
         let expectation = expectation(description: "testViewDidLoadCallAPIHandler_withSuccessResult")
 
-        // let result: Result<Shop, NetworkError> = ...
+//        let result: Result<Shop, NetworkError> = presenter.
 
         queue.asyncAfter(deadline: .now() + 0.2) {
             expectation.fulfill()
         }
-
+//        let vc = MyViewController()
+//          vc.service = serviceMock
+//          vc.viewDidLoad()
+//
+//          XCTAssertTrue(serviceMock.loadCalled)
+        
+//        view.viewDidLoad()
         waitForExpectations(timeout: 2, handler: nil)
 
         // TODO: Assert
+        
+//        XCTAssert view.applyShop
     }
 
     func testViewDidLoadCallAPIHandler_withFailureNoDataResult() throws {

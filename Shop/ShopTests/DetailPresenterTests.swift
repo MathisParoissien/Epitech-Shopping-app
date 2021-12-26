@@ -25,6 +25,7 @@ class DetailPresenterTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
         // TODO: Assert
+//        XCTAssert(v)
     }
 
     func testViewDidLoad_checkCacheForQuantity() throws {
@@ -32,6 +33,7 @@ class DetailPresenterTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
 
         // TODO: Assert
+//        XCTAssert(view.applyCallCount == )
     }
 
     func testDidTapAddButton_callSaveCacheManager() throws {

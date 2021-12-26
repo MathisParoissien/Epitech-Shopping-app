@@ -17,3 +17,8 @@ struct Product: Codable {
     var price_cents: Int
     var currency: String
 }
+
+struct Quantity: Codable {
+    
+    let quantity: Int
+}
