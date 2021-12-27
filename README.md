@@ -25,10 +25,11 @@ Exercises:
 - 7 Create caching layer:
     - 1 Save the selected quantity when the user tap the [-] or [+] button on the product detail page. ✅
     - 2 Update DetailPresenter ✅
-    - 3 Create Unit Tests to validate the caching
+    - 3 Create Unit Tests to validate the caching ✅
 
 - 8 Add Tests for HomePresenter and DetailPresenter
-    - 1 Located in HomePresenterTests.swift and DetailPresenterTests.swift
+    - 1 Located in HomePresenterTests.swift ❌
+    -  and DetailPresenterTests.swift ✅
 
 ## UI
 
