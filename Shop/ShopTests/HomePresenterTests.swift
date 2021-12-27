@@ -34,23 +34,36 @@ class HomePresenterTests: XCTestCase {
         let queue = DispatchQueue.main
         let expectation = expectation(description: "testViewDidLoadCallAPIHandler_withSuccessResult")
 
-//        let result: Result<Shop, NetworkError> = presenter.
-
+        var result: Result<Shop, NetworkError>?
+        
         queue.asyncAfter(deadline: .now() + 0.2) {
+            self.presenter.viewDidLoad()
+            self.presenter.apiHandler.fetchShop { res in
+                result = res
+            }
             expectation.fulfill()
         }
-//        let vc = MyViewController()
-//          vc.service = serviceMock
-//          vc.viewDidLoad()
-//
-//          XCTAssertTrue(serviceMock.loadCalled)
         
-//        view.viewDidLoad()
         waitForExpectations(timeout: 2, handler: nil)
 
         // TODO: Assert
         
-//        XCTAssert view.applyShop
+        switch result {
+        case .success(_):
+            XCTAssert(true)
+        case .failure(_):
+            XCTAssert(false)
+        case .none:
+            XCTAssert(false)
+        }
+//        XCTAssert(self.presenter)
+        
+//        try view.apply(shop: result.get())
+        
+//        XCTAssert(view.applyShop != nil)
+//        XCTAssert(view.applyShop)
+//        print(view.applyShop)
+        
     }
 
     func testViewDidLoadCallAPIHandler_withFailureNoDataResult() throws {
@@ -59,7 +72,7 @@ class HomePresenterTests: XCTestCase {
         let queue = DispatchQueue.main
         let expectation = expectation(description: "testViewDidLoadCallAPIHandler_withFailureNoDataResult")
 
-        // let result: Result<Shop, NetworkError> = .failure(.noData)
+         let result: Result<Shop, NetworkError> = .failure(.noData)
 
         queue.asyncAfter(deadline: .now() + 0.2) {
             expectation.fulfill()
@@ -68,6 +81,7 @@ class HomePresenterTests: XCTestCase {
         waitForExpectations(timeout: 2, handler: nil)
 
         // TODO: Assert
+        
     }
 
     func testViewDidLoadCallAPIHandler_withFailureMalformedDataResult() throws {
